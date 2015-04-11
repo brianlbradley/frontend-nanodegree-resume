@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: Red;
   line-height: 48px;
   display: inline;
 }
@@ -87,16 +87,16 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: red;
   display: none;
 }
 
 .orange {
-  background-color: #F5AE23;
+  background-color: red;
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: red;
 }
 
 .white-text {
@@ -213,3 +213,8 @@ span {
     display: block;
   }
 }
+
+.cityName {
+  color: gray
+  font-size:14px;
+  font-weight:  bold}

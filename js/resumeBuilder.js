@@ -124,14 +124,14 @@ var education = {
                "position" : "Forecasting Manager",
                "location" : "Birmingham AL",
                "dates" : "June, 2011 - Present",
-               "description" : "Create, design, and implement forecasts for 30 + call centers in various locations in the U.S and abroad. Multiple Forecasts consist of monthly, weekly, daily, and hourly volume and AHT"                   
+               "description" : "Create, design, and implement forecasts for 30 + call centers in various locations in the U.S and abroad. Multiple Forecasts consist of monthly, weekly, daily, and hourly volume along with AHT projections."                   
              
             },   
              {  "employer": "at&t",
                "position" : "Systems Manager",
                "location" : "Birmingham AL",
                "dates" : "February, 2005 - June, 2011",
-               "description"  : "Project Managed the ordering and maintenance Systems for a module of 250 customers. Migrated customers off expiring systems and implemented customers on new systems. Gave site presentations and conducted business analysis to determine best interface for customer. Gave customer demonstrations on how to utilize systems."
+               "description"  : "Project Managed the ordering and maintenance Systems for a module of 250 customers. Migrated customers off expiring systems and implemented customers on new systems. Gave site presentations and conducted business analysis to determine best interface for customer. Trained customers using interactive demonstrations on how to utilize systems."
                       
                
             },   
@@ -140,7 +140,7 @@ var education = {
                "position" : "Customer Service Representative",
                "location" : "Richardson, TX",
                "dates" : "March, 2002 - February,2005",
-               "description"  : "Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit"     
+               "description"  : "Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit."     
            }
           
           ]
@@ -200,7 +200,7 @@ var projects = {
           },   
 
               { "title": "Customer Migrations",
-                "description":"Project Managed 300 + customers from expiring systems to new Operational Support Systems",
+                "description":"Project Managed 300 + customers from expiring systems to new Operational Support Systems.",
                "year" : 2012
               },
             {"title": "Database Tracker",
