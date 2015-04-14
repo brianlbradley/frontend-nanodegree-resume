@@ -1,41 +1,45 @@
-
-var name = "Brian L. Bradley";
-
-var formattedName = HTMLheaderName.replace("%data%", name);
-
-
-var role = "Web Developer Genius";
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
- 
-var bio = {"name":"Brian Bradley", 
+var bio = {
+           "name":"Brian L. Bradley",
            "role":"Forecast Manager",
-            "contacts": {
-	        "mobile":"(205)213-5431", 
-	        "email":"brianlbradley@bellsouth.net",
-	        "github": "brianlbradley",
+           "contacts": {
+	         "mobile":"(205)213-5431",
+	         "email":"brianlbradley@bellsouth.net",
+	         "github": "brianlbradley",
           "location": "Birmingham, AL"
 	    },
-             "message": "Thanks for visiting my page!", 
+             "message": "Thanks for visiting my page!",
             "skills":["Forecasting", "SQL", "Web Developer","Data Analysis","Project Management"],
             "picture" :  "images/DSC_0010.jpeg"
-         }
-        
-         
-        
+         };
+
+
+bio.display = function () {
+     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+     var formattedName = HTMLheaderName.replace("%data%", bio.name);
              $("#header").prepend(HTMLbioPic.replace("%data%", bio.picture));
-              $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+             $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
+             $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
+             $("#header").append(HTMLgithub.replace("%data%", bio.contacts.github));
+             $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.message));
+             $("#header").append(HTMLlocation.replace("%data%", bio.contacts.location));
+             $("#header").prepend(formattedRole);
+             $("#header").prepend(formattedName)
+             $("#header").append(HTMLskillsStart);
 
-$("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
-         $("#header").append(HTMLgithub.replace("%data%", bio.contacts.github));
-$("#header").append(HTMLwelcomeMsg.replace("%data%", bio.message));
-$("#header").append(HTMLlocation.replace("%data%", bio.contacts.location));
+            var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+              $("#skills").append(formattedSkill);
+                  formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+                  $("#skills").append(formattedSkill);
+                  formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+                  $("#skills").append(formattedSkill);
+                  formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+                  $("#skills").append(formattedSkill);
+                  formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
+                  $("#skills").append(formattedSkill);
+            }
 
+              bio.display();
 
-
-          
 var education = {
             "schools" : [
 
@@ -45,16 +49,16 @@ var education = {
                "major" : "Marketing",
                "minor"  : "English",
                "GradYear" : 1997
-            },   
+            },
 
             {"name": "Jefferson State Community College",
                "location" : "Birmingham, AL",
                "degree" : "",
                "major" : "Business",
                "minor"  : "English",
-               "GradYear" : 1995        
+               "GradYear" : 1995
            }
-          ], 
+          ],
             "onlineCourses": [
             {
               "title": ["HTML and CSS", "Java Script"],
@@ -82,17 +86,17 @@ var education = {
              var formattedschooldates =HTMLschoolDates.replace("%data%", education.schools[school].GradYear);
              $(".education-entry:last").append(formattedschooldates);
              var formattedschoolmajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
-             $(".education-entry:last").append(formattedschoolmajor);              
+             $(".education-entry:last").append(formattedschoolmajor);
     }
 
     $("#education").append(HTMLonlineClasses);
-                
+
                 for (school in education.onlineCourses){
                  $("#education").append(HTMLschoolStart);
-                 formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[school].title);  
+                 formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[school].title);
                formattedonlineschool=HTMLonlineSchool.replace("%data%",education.onlineCourses[school].school);
                 formattedonline= formattedonlinetitle + formattedonlineschool;
-                $(".education-entry:last").append(formattedonline);    
+                $(".education-entry:last").append(formattedonline);
                formattedonlinedates= HTMLonlineDates.replace("%data%", education.onlineCourses[school].dates);
                $(".education-entry:last").append(formattedonlinedates);
                formattedonlineurl =HTMLonlineURL.replace("%data%", education.onlineCourses[school].url);
@@ -100,23 +104,9 @@ var education = {
               }
             };
 
-       education.display();  
+       education.display();
 
-           if (bio.skills.length > 0) {
-           	$("#header").append(HTMLskillsStart);
 
-           	var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
-           		$("#skills").append(formattedSkill);
-                  formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
-                  $("#skills").append(formattedSkill);
-                  formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
-                  $("#skills").append(formattedSkill);
-                  formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
-                  $("#skills").append(formattedSkill);
-                  formattedSkill = HTMLskills.replace("%data%", bio.skills[4]);
-                  $("#skills").append(formattedSkill);
-                 
-           	};
 
             var work = {
             "jobs" : [
@@ -124,47 +114,46 @@ var education = {
                "position" : "Forecasting Manager",
                "location" : "Birmingham AL",
                "dates" : "June, 2011 - Present",
-               "description" : "Create, design, and implement forecasts for 30 + call centers in various locations in the U.S and abroad. Multiple Forecasts consist of monthly, weekly, daily, and hourly volume along with AHT projections."                   
-             
-            },   
+               "description" : "Create, design, and implement forecasts for 30 + call centers in various locations in the U.S and abroad. Multiple Forecasts consist of monthly, weekly, daily, and hourly volume along with AHT projections."
+
+            },
              {  "employer": "at&t",
                "position" : "Systems Manager",
                "location" : "Birmingham AL",
                "dates" : "February, 2005 - June, 2011",
                "description"  : "Project Managed the ordering and maintenance Systems for a module of 250 customers. Migrated customers off expiring systems and implemented customers on new systems. Gave site presentations and conducted business analysis to determine best interface for customer. Trained customers using interactive demonstrations on how to utilize systems."
-                      
-               
-            },   
+
+
+            },
 
             {"employer": "Compass Bank",
                "position" : "Customer Service Representative",
                "location" : "Richardson, TX",
                "dates" : "March, 2002 - February,2005",
-               "description"  : "Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit."     
+               "description"  : "Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit."
            }
-          
+
           ]
       };
-            
 
-function displayWork () {
+
+         work.display = function () {
       for (job in work.jobs) {
-      	 $("#workExperience").append(HTMLworkStart); 
+      	 $("#workExperience").append(HTMLworkStart);
       	 var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
          var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].position);
          var formattedEmployerTitle = formattedEmployer + formattedTitle;
          $(".work-entry:last").append(formattedEmployerTitle);
-
-          var  formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-          $(".work-entry:last").append(formattedDates);  
-
-          var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);      
+         var  formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+          $(".work-entry:last").append(formattedDates);
+          var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
           $(".work-entry:last").append(formattedDescription);
-
       }
-}
+     }
+            work.display();
 
-displayWork ();
+
+
 $(document).click(function(loc) {
    var x = loc.pageX;
    var y = loc.pageY;
@@ -180,9 +169,9 @@ function inName(name)  {
   console.log(name);
 
   name[1]=names[1].toUpperCase();
-  names[0]= names.slice[0,1].toUpperCase()+
+  name[0]= names.slice[0,1].toUpperCase()+
     name[0].slice(1).toLowerCase();
-  
+
   return name[0] +" "+name[1];
 
 
@@ -196,8 +185,8 @@ var projects = {
             "projects" : [
             { "title" : "Forecast Modeling",
               "description": "Created Forecast Models for 33 Call Centers. Models include monthly, weekly, and hourly volume distributions.",
-                "year" : 2014 
-          },   
+                "year" : 2014
+          },
 
               { "title": "Customer Migrations",
                 "description":"Project Managed 300 + customers from expiring systems to new Operational Support Systems.",
@@ -206,7 +195,7 @@ var projects = {
             {"title": "Database Tracker",
              "description": "Designed, created, and implemented Access Database to keep track of billing records. Database was utilized in an expense reduction worth 1.6 million dollars.",
                 "year" : 2011
-            }  
+            }
              ]
            };
 
@@ -231,5 +220,5 @@ projects.display();
 
 $("#mapDiv").append(googleMap);
 
-  
- 
+
+
