@@ -1,5 +1,5 @@
 var bio = {
-           "name":"Brian L. Bradley",
+   "name":"Brian L. Bradley",
    "role":"Forecast Manager",
    "contacts":{
       "mobile":"(205)213-5431",
@@ -97,18 +97,18 @@ education.display= function() {
    $(".education-entry:last").append(formattedschoolmajor);
     }
 
-    $("#education").append(HTMLonlineClasses);
+   $("#education").append(HTMLonlineClasses);
 
-    for (school in education.onlineCourses){
-    $("#education").append(HTMLschoolStart);
+   for (school in education.onlineCourses){
+   $("#education").append(HTMLschoolStart);
     formattedonlinetitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[school].title);
     formattedonlineschool=HTMLonlineSchool.replace("%data%",education.onlineCourses[school].school);
     formattedonline= formattedonlinetitle + formattedonlineschool;
-    $(".education-entry:last").append(formattedonline);
+   $(".education-entry:last").append(formattedonline);
     formattedonlinedates= HTMLonlineDates.replace("%data%", education.onlineCourses[school].dates);
-    $(".education-entry:last").append(formattedonlinedates);
+   $(".education-entry:last").append(formattedonlinedates);
     formattedonlineurl =HTMLonlineURL.replace("%data%", education.onlineCourses[school].url);
-    $(".education-entry:last").append(formattedonlineurl);
+   $(".education-entry:last").append(formattedonlineurl);
   }
 };
 
