@@ -1,11 +1,11 @@
 var bio = {
-   "name":"Brian L. Bradley",
-   "role":"Forecast Manager",
+   "name": "Brian L. Bradley",
+   "role": "Forecast Manager",
    "contacts":{
-      "mobile":"(205)213-5431",
-      "email":"brianlbradley@bellsouth.net",
-      "github":"brianlbradley",
-      "location":"Birmingham, AL"
+      "mobile": "(205)213-5431",
+      "email": "brianlbradley@bellsouth.net",
+      "github": "brianlbradley",
+      "location": "Birmingham, AL"
    },
    "message":"Thanks for visiting my page!",
    "skills":[
@@ -45,22 +45,22 @@ bio.display = function () {
     bio.display();
 
 var education = {
-   "schools":[
-      {
-         "name":"Birmingham Southern College",
-         "location":"Birmingham, AL",
-         "degree":"Bachelor of Science",
-         "major":"Marketing",
-         "minor":"English",
-         "GradYear":1997
+   "schools":[{
+
+         "name": "Birmingham Southern College",
+         "location": "Birmingham, AL",
+         "degree": "Bachelor of Science",
+         "major": "Marketing",
+         "minor": "English",
+         "GradYear": 1997
       },
       {
-         "name":"Jefferson State Community College",
-         "location":"Birmingham, AL",
-         "degree":"",
-         "major":"Business",
-         "minor":"English",
-         "GradYear":1995
+         "name": "Jefferson State Community College",
+         "location": "Birmingham, AL",
+         "degree": "",
+         "major": "Business",
+         "minor": "English",
+         "GradYear ":1995
       }
    ],
    "onlineCourses":[
@@ -69,9 +69,9 @@ var education = {
             "HTML and CSS",
             "Java Script"
          ],
-         "school":"Udacity",
-         "dates":2015,
-         "url":"http://www.udacity.com"
+         "school": "Udacity",
+         "dates": 2015,
+         "url": "http://www.udacity.com"
       },
       {
          "title":[
@@ -119,25 +119,25 @@ education.display= function() {
 var work = {
    "jobs":[
       {
-         "employer":"at&t",
-         "position":"Forecasting Manager",
-         "location":"Birmingham AL",
-         "dates":"June, 2011 - Present",
-         "description":"Create, design, and implement forecasts for 30 + call centers in various locations in the U.S and abroad. Multiple Forecasts consist of monthly, weekly, daily, and hourly volume along with AHT projections."
+         "employer": "at&t",
+         "position": "Forecasting Manager",
+         "location": "Birmingham AL",
+         "dates": "June, 2011 - Present",
+         "description": "Create, design, and implement forecasts for 30 + call centers in various locations in the U.S and abroad. Multiple Forecasts consist of monthly, weekly, daily, and hourly volume along with AHT projections."
       },
       {
-         "employer":"at&t",
-         "position":"Systems Manager",
-         "location":"Birmingham AL",
-         "dates":"February, 2005 - June, 2011",
-         "description":"Project Managed the ordering and maintenance Systems for a module of 250 customers. Migrated customers off expiring systems and implemented customers on new systems. Gave site presentations and conducted business analysis to determine best interface for customer. Trained customers using interactive demonstrations on how to utilize systems."
+         "employer": "at&t",
+         "position": "Systems Manager",
+         "location": "Birmingham AL",
+         "dates": "February, 2005 - June, 2011",
+         "description": "Project Managed the ordering and maintenance Systems for a module of 250 customers. Migrated customers off expiring systems and implemented customers on new systems. Gave site presentations and conducted business analysis to determine best interface for customer. Trained customers using interactive demonstrations on how to utilize systems."
       },
       {
-         "employer":"Compass Bank",
-         "position":"Customer Service Representative",
-         "location":"Richardson, TX",
-         "dates":"March, 2002 - February,2005",
-         "description":"Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit."
+         "employer": "Compass Bank",
+         "position": "Customer Service Representative",
+         "location": "Richardson, TX",
+         "dates": "March, 2002 - February,2005",
+         "description": "Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit."
       }
    ]
 };
@@ -170,18 +170,18 @@ $(document).click(function(loc) {
 var projects = {
    "projects":[{
 
-         "title":"Forecast Modeling",
-         "description":"Created Forecast Models for 33 Call Centers. Models include monthly, weekly, and hourly volume distributions.",
+         "title": "Forecast Modeling",
+         "description": "Created Forecast Models for 33 Call Centers. Models include monthly, weekly, and hourly volume distributions.",
          "year":2014
       },
       {
-         "title":"Customer Migrations",
+         "title": "Customer Migrations",
          "description":"Project Managed 300 + customers from expiring systems to new Operational Support Systems.",
          "year":2012
       },
       {
-         "title":"Database Tracker",
-         "description":"Designed, created, and implemented Access Database to keep track of billing records. Database was utilized in an expense reduction worth 1.6 million dollars.",
+         "title": "Database Tracker",
+         "description": "Designed, created, and implemented Access Database to keep track of billing records. Database was utilized in an expense reduction worth 1.6 million dollars.",
          "year":2011
       }
    ]
