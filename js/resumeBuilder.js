@@ -15,11 +15,11 @@ var bio = {
       "Data Analysis",
       "Project Management"
    ],
-   "picture":"images/DSC_0010.jpeg"
-};
+   "picture":"images/DSC_0010.jpeg",
 
 
-bio.display = function () {
+
+"display":function () {
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     $("#header").prepend(formattedRole);
@@ -39,7 +39,7 @@ bio.display = function () {
         var formattedSkill = HTMLskills.replace("%data%", bio.skills[skill]);
         $("#skills").append(formattedSkill);
    }
-
+}
  };
 
     bio.display();
@@ -65,7 +65,7 @@ var education = {
    ],
    "onlineCourses":[
       {
-         "title":[
+         "title": [
             "HTML and CSS",
             "Java Script"
          ],
@@ -79,12 +79,12 @@ var education = {
          ],
          "school":"Coursera",
          "dates":2013,
-         "url":"https://www.coursera.org"
+         "url":"https://www.coursera.org",
       }
-   ]
-};
+   ],
 
-education.display= function() {
+
+"display": function() {
     for (school in education.schools) {
     $("#education").append(HTMLschoolStart);
     var formattedschoolname = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -110,7 +110,7 @@ education.display= function() {
     formattedonlineurl =HTMLonlineURL.replace("%data%", education.onlineCourses[school].url);
     $(".education-entry:last").append(formattedonlineurl);
   }
-
+ }
 };
 
     education.display();
@@ -139,10 +139,10 @@ var work = {
          "dates": "March, 2002 - February,2005",
          "description": "Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit."
       }
-   ]
-};
+   ],
 
-work.display = function () {
+
+"display": function () {
     for (job in work.jobs) {
   	$("#workExperience").append(HTMLworkStart);
   	var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -154,16 +154,9 @@ work.display = function () {
     var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
     $(".work-entry:last").append(formattedDescription);
   }
+}
 };
       work.display();
-
-
-
-$(document).click(function(loc) {
-   var x = loc.pageX;
-   var y = loc.pageY;
-   logClicks (x,y);
-});
 
 
 
@@ -184,12 +177,11 @@ var projects = {
          "description": "Designed, created, and implemented Access Database to keep track of billing records. Database was utilized in an expense reduction worth 1.6 million dollars.",
          "year":2011
       }
-   ]
-};
+   ],
 
 
 
-projects.display= function() {
+"display": function() {
       for (project in projects.projects) {
       $("#projects").append(HTMLprojectStart);
 
@@ -202,11 +194,16 @@ projects.display= function() {
       var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
        $(".project-entry:last").append(formattedDescription);
     }
-
+  }
 };
 
 projects.display();
 
+$(document).click(function(loc) {
+   var x = loc.pageX;
+   var y = loc.pageY;
+   logClicks (x,y);
+});
 
 $("#mapDiv").append(googleMap);
 
