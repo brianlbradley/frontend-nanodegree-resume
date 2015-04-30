@@ -7,7 +7,7 @@ var bio = {
       "github": "brianlbradley",
       "location": "Birmingham, AL"
    },
-   "message":"Thanks for visiting my page!",
+   "message":"Live for the moment. A moment is only an eternity away.",
    "skills":[
       "Forecasting",
       "SQL",
@@ -127,16 +127,16 @@ var work = {
       },
       {
          "employer": "at&t",
-         "position": "Systems Manager",
+         "position": "System Project Manager",
          "location": "Birmingham AL",
-         "dates": "February, 2005 - June, 2011",
+         "dates": "February, 1999 - June, 2011",
          "description": "Project Managed the ordering and maintenance Systems for a module of 250 customers. Migrated customers off expiring systems and implemented customers on new systems. Gave site presentations and conducted business analysis to determine best interface for customer. Trained customers using interactive demonstrations on how to utilize systems."
       },
       {
          "employer": "Compass Bank",
          "position": "Customer Service Representative",
          "location": "Richardson, TX",
-         "dates": "March, 2002 - February,2005",
+         "dates": "March, 1997 - February,1999",
          "description": "Disseminated customer banking information for deposit and loan accounts. Upsold customers for new services including installment loans,PC Banking, and Certificates of Deposit."
       }
    ],
